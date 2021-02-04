@@ -1,0 +1,41 @@
+{
+  "name": "spike-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js --tags 'not @pending' --require-module @babel/register --require-module @babel/polyfill"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "@cucumber/cucumber": "^7.0.0",
+    "husky": "^4.3.8"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "axios": "^0.21.1",
+    "babel-eslint": "*",
+    "core-js": "^3.8.3",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "lint-staged": "^10.5.3",
+    "prettier": "*"
+  }
+}
