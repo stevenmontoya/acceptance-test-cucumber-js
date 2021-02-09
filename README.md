@@ -21,7 +21,7 @@ $ npm i
 Running cucumber-js to run acceptance test
 
 ```
-npm i test
+npm test
 ```
 
 ### Features
